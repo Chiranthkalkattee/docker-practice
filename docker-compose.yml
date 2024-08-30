@@ -1,0 +1,21 @@
+version: "3"
+services:
+  app:
+    build: .
+    container_name: chirath
+    restart: always
+    ports:
+      - "8000:8000"
+    command: "./start.sh"
+    volumes:
+      - .:/usr/src/app
+  nginx:
+    image: nginx:latest
+    container_name: webserver-prod
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - app

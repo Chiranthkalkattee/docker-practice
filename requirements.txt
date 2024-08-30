@@ -1,0 +1,7 @@
+Django==4.2.4
+django-appconf==1.0.6
+django-cors-headers==4.2.0
+django-staticfiles==1.2.1
+djangorestframework==3.14.0
+django-crontab==0.7.1
+djangorestframework-api-key==3.0.0
